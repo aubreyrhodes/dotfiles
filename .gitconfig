@@ -29,6 +29,12 @@
     pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
 [merge]
     tool = mvimdiff
+[branch]
+    autosetuprebase = always
+[branch "master"]
+    rebase = true
+[branch "staging"]
+    rebase = true
 [github]
     user = alindeman@gmail.com
     token = editme
