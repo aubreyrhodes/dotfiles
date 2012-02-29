@@ -13,6 +13,8 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-haml'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-commentary'
 
 " Syntax
 Bundle 'scrooloose/syntastic'
