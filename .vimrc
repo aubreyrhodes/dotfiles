@@ -14,6 +14,9 @@ Bundle 'tpope/vim-haml'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
 
+" Syntax
+Bundle 'scrooloose/syntastic'
+
 " Colors
 Bundle 'altercation/vim-colors-solarized'
 
