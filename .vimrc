@@ -9,6 +9,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Languages
+Bundle 'IndentAnything'
+Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-haml'
 Bundle 'vim-ruby/vim-ruby'
