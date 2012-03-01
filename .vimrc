@@ -140,8 +140,9 @@ set title
 " backups
 set nobackup
 set nowritebackup
-set directory=./tmp,$HOME/.vim/tmp/,$TEMP/,.
 set tags=./tmp/tags,./tags,tags
+set backupdir=~/.vim/_backup//
+set directory=~/.vim/_temp//
 
 " fuzzy matching settings
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
