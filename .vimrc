@@ -40,6 +40,8 @@ set wildmenu
 set number
 set ruler
 
+set mouse=a
+
 set encoding=utf-8
 
 " whitespace
