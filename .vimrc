@@ -28,6 +28,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'mileszs/ack.vim'
+Bundle 'ervandew/supertab'
 
 syntax enable
 filetype plugin indent on
