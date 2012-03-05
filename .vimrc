@@ -152,6 +152,10 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 " Insert the current directory into a command-line path
 cmap <C-P> <C-R>=expand("%:p:h") . "/"
 
+" ctrlp tweaks
+let g:ctrlp_working_path_mode = 0 " don't manage working directory
+let g:ctrlp_jump_to_buffer = 0 " disable jumping to already open buffer
+
 colorscheme solarized
 
 if has("gui_running")
