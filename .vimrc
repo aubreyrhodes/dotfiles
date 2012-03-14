@@ -76,8 +76,8 @@ nnoremap <leader><leader> <c-^>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" show colored column at 80
-set colorcolumn=80
+" show colored column at 80 and 100
+set colorcolumn=80,100
 
 " Disable arrow keys
 "nnoremap <up> <nop>
