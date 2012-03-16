@@ -25,7 +25,7 @@ plugins=(brew git github heroku knife node npm osx ruby rails3 rvm vi-mode nyan)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH
 
 alias be="nocorrect bundle exec"
 alias b="nocorrect bundle"
