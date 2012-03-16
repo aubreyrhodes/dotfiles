@@ -24,6 +24,7 @@ Bundle 'alindeman/pig.vim'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " Other Utilities
 Bundle 'kien/ctrlp.vim'
@@ -162,7 +163,12 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/"
 let g:ctrlp_working_path_mode = 0 " don't manage working directory
 let g:ctrlp_jump_to_buffer = 0 " disable jumping to already open buffer
 
-colorscheme solarized
+if has("gui_running")
+  colorscheme Tomorrow-Night
+else
+  colorscheme solarized
+  set bg=dark
+endif
 
 if has("gui_running")
   set transparency=6
