@@ -27,27 +27,40 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH
 
+# Certain commands don't lend themselves well to autocorrect
 alias be="nocorrect bundle exec"
 alias b="nocorrect bundle"
-
 alias knife='nocorrect knife'
 alias rspec='nocorrect rspec'
 alias git='nocorrect git'
 
+# vim all the way
 export EDITOR="vim"
 export GIT_EDITOR="vim"
-alias mvim='rvm system do /usr/local/bin/mvim $@'
-alias vim='mvim -v'
 
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
+# Sharing history among sessions is annoying to me
+unsetopt share_history
+
+# Java on OS X
+if [ -d /System/Library/Frameworks/JavaVM.framework ]; then
+  export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
+fi
+
+# EC2 tools
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.4.4.1/jars"
 export AWS_ELB_HOME="/usr/local/Cellar/elb-tools/1.0.14.3/jars"
-
 if [ -d $HOME/.ec2 ]; then
   export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/*-pk.pem)"
   export EC2_CERT="$(/bin/ls $HOME/.ec2/*-cert.pem)"
 fi
 
-unsetopt share_history
+# rvm
+if [ -d $HOME/.rvm ]; then
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+  alias mvim='rvm system do /usr/local/bin/mvim $@'
+fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+# vim on OS X uses the one installed by homebrew
+if [ -x /usr/local/bin/mvim ]; then
+  alias vim='mvim -v'
+fi
