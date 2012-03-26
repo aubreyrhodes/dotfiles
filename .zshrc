@@ -64,3 +64,6 @@ fi
 if [ -x /usr/local/bin/mvim ]; then
   alias vim='mvim -v'
 fi
+
+# tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
