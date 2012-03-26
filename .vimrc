@@ -31,6 +31,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'mileszs/ack.vim'
 Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-fugitive'
 
 syntax enable
 filetype plugin indent on
