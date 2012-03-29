@@ -35,6 +35,8 @@
     rebase = true
 [branch "staging"]
     rebase = true
+[push]
+    default = upstream
 [github]
     user = alindeman@gmail.com
     token = editme
