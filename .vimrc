@@ -26,8 +26,11 @@ Bundle 'alindeman/pig.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
-" Other Utilities
+" Navigation
+Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
+
+" Other Utilities
 Bundle 'tpope/vim-surround'
 Bundle 'mileszs/ack.vim'
 Bundle 'ervandew/supertab'
