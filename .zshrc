@@ -57,7 +57,7 @@ fi
 # rvm
 if [ -d $HOME/.rvm ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-  alias mvim='rvm system do /usr/local/bin/mvim $@'
+  # alias mvim='rvm system do /usr/local/bin/mvim $@'
 fi
 
 # vim on OS X uses the one installed by homebrew
