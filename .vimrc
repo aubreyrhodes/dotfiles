@@ -168,6 +168,9 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/"
 let g:ctrlp_working_path_mode = 0 " don't manage working directory
 let g:ctrlp_jump_to_buffer = 0 " disable jumping to already open buffer
 
+" vroom tweaks
+let g:vroom_use_colors = 1
+
 if has("gui_running")
   colorscheme Tomorrow-Night
 else
