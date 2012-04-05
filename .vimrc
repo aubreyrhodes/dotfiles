@@ -172,6 +172,24 @@ let g:ctrlp_jump_to_buffer = 0 " disable jumping to already open buffer
 " vroom tweaks
 let g:vroom_use_colors = 1
 
+" opening lines with same indentation
+map <Leader>o :call MoveLine('o', 'k')<CR>
+map <Leader>O :call MoveLine('O', 'j')<CR>
+
+function! MoveLine(open_motion, post_motion)
+  let cols=col('.')
+  execute "normal! D" . a:open_motion
+
+  let next_cols=col('.')
+  let delta_cols=cols-next_cols
+
+  if(delta_cols > 0)
+    execute "normal! " . delta_cols . "A "
+  endif
+
+  execute "normal! p" . a:post_motion
+endfunction
+
 if has("gui_running")
   colorscheme Tomorrow-Night
 else
