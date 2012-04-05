@@ -42,8 +42,8 @@ syntax enable
 filetype plugin indent on
 
 " Pig
-augroup filetypedetect 
-  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
+augroup filetypedetect
+  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
 augroup END
 
 " Thanks http://stevelosh.com/blog/2010/09/coming-home-to-vim/
