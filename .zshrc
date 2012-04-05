@@ -67,3 +67,6 @@ fi
 
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# teamocil
+compctl -g '~/.teamocil/*(:t:r)' teamocil
