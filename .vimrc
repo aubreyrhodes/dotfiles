@@ -176,6 +176,9 @@ let g:vroom_use_colors = 1
 map <Leader>o :call MoveLine('o', 'k')<CR>
 map <Leader>O :call MoveLine('O', 'j')<CR>
 
+" Visually select last edited/pasted text
+nmap gV `[v`]
+
 function! MoveLine(open_motion, post_motion)
   let cols=col('.')
   execute "normal! D" . a:open_motion
