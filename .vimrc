@@ -37,6 +37,7 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'skalnik/vim-vroom'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'godlygeek/tabular'
 
 syntax enable
 filetype plugin indent on
@@ -110,9 +111,6 @@ nnoremap k gk
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
-
-" shortcut for :Ack
-nnoremap <leader>a :Ack
 
 " <leader>v selects text that was just pasted
 nnoremap <leader>v V`]
@@ -192,6 +190,18 @@ function! MoveLine(open_motion, post_motion)
 
   execute "normal! p" . a:post_motion
 endfunction
+
+" Tabularize
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a{ :Tabularize /{<CR>
+  vmap <Leader>a{ :Tabularize /{<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+  nmap <Leader>a> :Tabularize /=><CR>
+  vmap <Leader>a> :Tabularize /=><CR>
+endif
 
 if has("gui_running")
   colorscheme Tomorrow-Night
